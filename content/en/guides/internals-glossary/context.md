@@ -115,9 +115,9 @@ A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$rout
 
 ### error
 
-`error` (_Function_)
+`error` (_Object_)
 
-Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
+Use this method to show the error page. The params must include at least an empty object {} in order to display the error page. Example: error({statusCode: 404, message: 'Page not found.'}). Any params can be defined and they will be passed to error.vue in the layouts folder, which must exist. In error.vue, the params can be called as 'error.paramKey'. See [Error Page] (https://nuxtjs.org/docs/2.x/concepts/views/#error-page)
 
 ### `$config`
 
